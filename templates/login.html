@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Rabbits Paradise{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="auth-card" style="background-color: #fff3e0; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+        <div class="card-header" style="text-align: center;">
+            <div class="logo-small" style="margin-bottom: 20px;">
+                <i class="fas fa-carrot" style="font-size: 50px; color: #ff8c00;"></i>  <!-- Rabbit-related icon -->
+            </div>
+            <h2 style="color: #3e2723;">Welcome Back to Rabbits Paradise</h2>
+            <p style="color: #6d4c41;">Sign in to your account to continue</p>
+        </div>
+
+        <form method="POST" class="auth-form">
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="fas fa-user" style="color: #ff6f20;"></i>
+                    <input type="text" name="username" placeholder="Username" required class="form-input" style="border: 1px solid #ff8c00; border-radius: 5px; padding: 10px;">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-with-icon">
+                    <i class="fas fa-lock" style="color: #ff6f20;"></i>
+                    <input type="password" name="password" placeholder="Password" required class="form-input" style="border: 1px solid #ff8c00; border-radius: 5px; padding: 10px;">
+                </div>
+            </div>
+
+            <button type="submit" class="btn" style="background-color: #ff8c00; color: white; padding: 10px 20px; border-radius: 5px; width: 100%; border: none;">
+                <i class="fas fa-sign-in-alt"></i>
+                Sign In
+            </button>
+        </form>
+
+        <div class="auth-footer" style="text-align: center; margin-top: 20px;">
+            <p>Don't have an account? 
+                <a href="{{ url_for('signup') }}" class="auth-link" style="color: #4caf50;">
+                    Create one here
+                </a>
+            </p>
+        </div>
+
+        <div class="social-auth" style="margin-top: 30px; text-align: center;">
+            <div class="divider" style="margin-bottom: 10px;">
+                <span style="font-weight: bold; color: #3e2723;">Or continue with</span>
+            </div>
+            <div class="social-buttons">
+                <button class="social-btn" style="background-color: #db4437; color: white; border: none; border-radius: 5px; padding: 10px; margin: 0 5px;">
+                    <i class="fab fa-google"></i>
+                </button>
+                <button class="social-btn" style="background-color: #333; color: white; border: none; border-radius: 5px; padding: 10px; margin: 0 5px;">
+                    <i class="fab fa-github"></i>
+                </button>
+                <button class="social-btn" style="background-color: #1da1f2; color: white; border: none; border-radius: 5px; padding: 10px; margin: 0 5px;">
+                    <i class="fab fa-twitter"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

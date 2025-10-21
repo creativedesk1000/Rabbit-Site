@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to Rabbits Paradise{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="hero-card" style="background-color: #f0e5d7; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+        <div class="hero-content" style="text-align: center;">
+            <div class="logo" style="margin-bottom: 20px;">
+                <i class="fas fa-carrot" style="font-size: 50px; color: #ff8c00;"></i>  <!-- Carrot icon -->
+                <h1 style="color: #3c763d;">Rabbits Paradise</h1>
+            </div>
+            <p class="hero-subtitle" style="color: #6c757d; font-size: 18px;">Explore the charming world of rabbits with our beautifully crafted Flask application.</p>
+            
+            <div class="feature-grid" style="display: flex; justify-content: center; margin: 20px 0;">
+                <div class="feature-item" style="margin: 0 15px; text-align: center;">
+                    <i class="fas fa-paw" style="font-size: 30px; color: #ff6b6b;"></i>
+                    <span style="display: block; color: #3c763d;">Safe Habitat</span>
+                </div>
+                <div class="feature-item" style="margin: 0 15px; text-align: center;">
+                    <i class="fas fa-leaf" style="font-size: 30px; color: #4caf50;"></i>
+                    <span style="display: block; color: #3c763d;">Nature Friendly</span>
+                </div>
+                <div class="feature-item" style="margin: 0 15px; text-align: center;">
+                    <i class="fas fa-users" style="font-size: 30px; color: #2196f3;"></i>
+                    <span style="display: block; color: #3c763d;">Community Events</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons" style="margin-top: 20px;">
+                <a href="{{ url_for('login') }}" class="btn" style="background-color: #ff8c00; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-right: 10px;">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </a>
+                <a href="{{ url_for('signup') }}" class="btn" style="background-color: #28a745; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-visual" style="position: relative; height: 200px; margin-top: 30px;">
+            <div class="floating-element" style="position: absolute; left: 10%; top: 10%; animation: float 3s infinite;">
+                <i class="fas fa-carrot" style="font-size: 40px; color: #ff8c00;"></i>
+            </div>
+            <div class="floating-element delay-1" style="position: absolute; left: 50%; top: 20%; animation: float 3s infinite;">
+                <i class="fas fa-bunny" style="font-size: 40px; color: #ff6b6b;"></i>
+            </div>
+            <div class="floating-element delay-2" style="position: absolute; left: 80%; top: 10%; animation: float 3s infinite;">
+                <i class="fas fa-garden" style="font-size: 40px; color: #4caf50;"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @keyframes float {
+        0% { transform: translatey(0); }
+        50% { transform: translatey(-10px); }
+        100% { transform: translatey(0); }
+    }
+</style>
+{% endblock %}
